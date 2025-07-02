@@ -1,8 +1,13 @@
 # IoT-network-2025
 IoT 개발자 네트워크 리포지토리
 
+## 1일차
+
+### 결석으로 인한
+
 ## 2일차
 
+### 네트워크 함수
 - inet_addr : .으로 연결되어있는 문자열을 정수형태로 만드는데 특화 되어있는 함수
     - ex) 
     
@@ -12,8 +17,9 @@ IoT 개발자 네트워크 리포지토리
 - inet_ntoa() : 정수 ip를 문자열 주소로 변환
     - ex) inet_ntoa(0xc0a80001) -> 1.0.168.192
 
+### IPv4 관련 구조체
+
 ```c
-// IPv4 관련 구조체
 netinet/in.h
 
 typedef unsigned short int sa_family_t
@@ -44,7 +50,7 @@ struct sockaddr { sa_family_t sin_family;  char sa_data[14]; }      // size : 16
     - 구조체의 크기를 `struct sockaddr` (16바이트)와 일치시키기 위한 **패딩** 필드.
     - 실제 네트워크 프로그래밍에서는 사용되지 않으며, 일반적으로 `0`으로 초기화됨.
 
-
+### ?
 - AF_INET : 주소체계
 - PF_INET : 프로토콜패밀리
     - -> 둘다 IPv4를 나타냄
