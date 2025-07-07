@@ -63,4 +63,17 @@ struct sockaddr { sa_family_t sin_family;  char sa_data[14]; }      // size : 16
 
 ## 3일차
 
-### 
+### TCP, UDP
+TCP : 안정적.
+ㅕUDP 대량 정보. 불안전. 
+
+host1 입력버퍼 <-> host2 출력버퍼 연결
+host1 출력버터 <-> host2 입력버퍼 연결
+=> 이 것들은 소켓이 생성되면 자동으로 없어짐
+
+#### 차이
+tcp : ACK 존재 
+host1 -> host2  1000bytes 보냄
+응답 : host2 -> host1 시퀀스번호로 1001으로 보냄 (+1을 해줘야함)
+if(+1이 안됐다면 제대로 처리 안된 것)
+
